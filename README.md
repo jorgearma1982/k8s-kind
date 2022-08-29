@@ -227,13 +227,6 @@ $ kubectl apply -f whoami/2_service.yml
 service/whoami created
 ```
 
-Creamos el ingress de una aplicación:
-
-```shell
-$ kubectl apply -f whoami/3_ingress.yml
-ingress.networking.k8s.io/whoami created
-```
-
 Esperamos unos segundos a que levanten los servicios y continuamos con la validaciones.
 
 ## Validación aplicación
@@ -263,7 +256,7 @@ Como se puede ver se tiene los recursos `deployment`, el `replicaset`, los `pods
 Para destruir el cluster ejecutamos:
 
 ```shell
-$ kind delete k8scluster
+$ kind delete cluster --name k8scluster
 Deleting cluster "k8scluster" ...
 ```
 
